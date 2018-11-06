@@ -1,5 +1,4 @@
 function sendLoginForm() {
-
     var xhttp = false;
     if (window.XMLHttpRequest) {
         xhttp = new XMLHttpRequest();
@@ -21,7 +20,7 @@ function sendLoginForm() {
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-            alert(this.getAllResponseHeaders() + "\n" + this.status + "\n" + this.responseText);
+            //alert(this.getAllResponseHeaders() + "\n" + this.status + "\n" + this.responseText);
             if (this.status == 200) {
                 successSubmit();
             } else {
@@ -32,6 +31,28 @@ function sendLoginForm() {
     ;
 
     xhttp.send(json);
+}
+
+function disableForm(){
+	var elements = document.getElementById("loginForm").elements;
+	alert("z");
+	for (var i = 0; i < elements.length; i++) {
+		elements[i].disabled = true;
+}
+}
+
+function disableForm(){
+	var elements = document.getElementById("loginForm").elements;
+	for (var i = 0; i < elements.length; i++) {
+		elements[i].disabled = true;
+}
+}
+
+function enableForm(){
+	var elements = document.getElementById("loginForm").elements;
+	for (var i = 0; i < elements.length; i++) {
+		elements[i].disabled = false;
+}
 }
 
 function successSubmit() {

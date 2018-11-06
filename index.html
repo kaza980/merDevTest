@@ -12,7 +12,7 @@
             <img id="logo" src="img/w-mercury-development.svg">
         </div>
         <div class="whiteBackground">
-            <form id="loginForm" onsubmit="sendLoginForm()">
+            <form id="loginForm" name = "loginForm" onsubmit="sendLoginForm();	disableForm(); ">
                 <div class="log-In">
                     <p>Log In</p>
                 </div>
@@ -26,10 +26,10 @@
                     <p>E-mail or password is incorrect</p>
                 </div>
                 <div class="center buttonField">
-                    <input type="submit" value="Login" class="buttonForm">
+                    <input type="submit" value="Login" class="buttonForm" onclick="disableForm()">
                 </div>
             </form>
-            <form id="logoutForm" onsubmit="sendLogoutForm()" style="display:none">
+            <form id="logoutForm" onsubmit="sendLogoutForm(); enableForm();" style="display:none">
                 <div class="avatar center">
                     <img id="avatar" src="img/4.png">
                 </div>
