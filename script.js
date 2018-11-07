@@ -10,7 +10,7 @@ function sendLoginForm() {
         }
     }
 
-    xhttp.open('POST', 'http://us-central1-mercdev-academy.cloudfunctions.net/login');
+    xhttp.open('POST', 'https://us-central1-mercdev-academy.cloudfunctions.net/login');
     xhttp.setRequestHeader("Content-Type", "application/json");
    
     var json = JSON.stringify({
@@ -53,7 +53,7 @@ function successSubmit() {
 	document.getElementById("logoutForm").style.display = "block";
 }
 
-function failSubmit(var code, var text) {
+function failSubmit(code, text) {
 	document.getElementById("errorMessage").innerHTML = "Error " + code + ": "+text;
     document.getElementById("errorBlock").style.display = "block";
 	enableForm();
