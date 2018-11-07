@@ -7,12 +7,15 @@ async function sendLoginForm(){
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                email: "user@example.com",
-                password: "mercdev"
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value
             })
         });
         const content = await rawResponse.json();
-        successSubmit(content)
+        if(!rawResponse.ok)
+            failSubmit(content.error)
+        else
+            successSubmit(content)
     }
     catch (e) {
         failSubmit(e);
@@ -49,5 +52,7 @@ function failSubmit(text) {
 
 function sendLogoutForm() {
     document.getElementById("logoutForm").style.display = "none";
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
     document.getElementById("loginForm").style.display = "block";
 }
