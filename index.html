@@ -23,10 +23,10 @@
                     <input id="password" class="inputForm" name="password" type="password" placeholder="Password" required title="Enter Password">
                 </div>
                 <div class="center" id="errorBlock">
-                    <p>E-mail or password is incorrect</p>
+                    <p id="errorMessage">E-mail or password is incorrect</p>
                 </div>
                 <div class="center buttonField">
-                    <input type="submit" value="Login" class="buttonForm" onclick="disableForm()">
+                    <input type="submit" value="Login" class="buttonForm">
                 </div>
             </form>
             <form id="logoutForm" onsubmit="sendLogoutForm(); enableForm();" style="display:none">

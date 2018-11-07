@@ -11,7 +11,7 @@ function sendLoginForm() {
     }
 
     xhttp.open('POST', 'http://us-central1-mercdev-academy.cloudfunctions.net/login');
-    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.setRequestHeader("Content-Type", "application/json");
    
     var json = JSON.stringify({
         email: document.getElementById("email").value,
@@ -20,25 +20,17 @@ function sendLoginForm() {
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-            //alert(this.getAllResponseHeaders() + "\n" + this.status + "\n" + this.responseText);
+            alert(this.getAllResponseHeaders() + "\n" + this.status + "\n" + this.responseText);
             if (this.status == 200) {
                 successSubmit();
             } else {
-                failSubmit();
+                failSubmit(this.status, this.responseText);
             }
         }
     }
     ;
 
     xhttp.send(json);
-}
-
-function disableForm(){
-	var elements = document.getElementById("loginForm").elements;
-	alert("z");
-	for (var i = 0; i < elements.length; i++) {
-		elements[i].disabled = true;
-}
 }
 
 function disableForm(){
@@ -61,8 +53,10 @@ function successSubmit() {
 	document.getElementById("logoutForm").style.display = "block";
 }
 
-function failSubmit() {
+function failSubmit(var code, var text) {
+	document.getElementById("errorMessage").innerHTML = "Error " + code + ": "+text;
     document.getElementById("errorBlock").style.display = "block";
+	enableForm();
 }
 
 function sendLogoutForm() {
