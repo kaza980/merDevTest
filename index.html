@@ -12,7 +12,7 @@
             <img id="logo" src="img/w-mercury-development.svg">
         </div>
         <div class="whiteBackground">
-            <form id="loginForm" name = "loginForm" onsubmit="sendLoginForm();	disableForm(); ">
+            <form id="loginForm" name = "loginForm" onsubmit="sendLoginForm()">
                 <div class="log-In">
                     <p>Log In</p>
                 </div>
@@ -29,12 +29,12 @@
                     <input type="submit" value="Login" class="buttonForm">
                 </div>
             </form>
-            <form id="logoutForm" onsubmit="sendLogoutForm(); enableForm();" style="display:none">
+            <form id="logoutForm" onsubmit="sendLogoutForm();" style="display:none">
                 <div class="avatar center">
-                    <img id="avatar" src="img/4.png">
+                    <img id="avatar">
                 </div>
                 <div class="nickname">
-                    <p>Helena Joseph</p>
+                    <p id="nickname">Helena Joseph</p>
                 </div>
                 <div class="center buttonField">
                     <input type="submit" value="Logout" class="buttonForm">

@@ -1,65 +1,53 @@
-function sendLoginForm() {
-    var xhttp = false;
-    if (window.XMLHttpRequest) {
-        xhttp = new XMLHttpRequest();
-    } else {
-        if (window.ActiveXObject) {
-            try {
-                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            } catch (e) {}
-        }
+async function sendLoginForm(){
+    try {
+        const rawResponse = await fetch('https://us-central1-mercdev-academy.cloudfunctions.net/login', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: "user@example.com",
+                password: "mercdev"
+            })
+        });
+        const content = await rawResponse.json();
+        successSubmit(content)
     }
-
-    xhttp.open('POST', 'https://us-central1-mercdev-academy.cloudfunctions.net/login');
-    xhttp.setRequestHeader("Content-Type", "application/json");
-   
-    var json = JSON.stringify({
-        email: document.getElementById("email").value,
-        password: document.getElementById("password").value
-    });
-
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-            alert(this.getAllResponseHeaders() + "\n" + this.status + "\n" + this.responseText);
-            if (this.status == 200) {
-                successSubmit();
-            } else {
-                failSubmit(this.status, this.responseText);
-            }
-        }
+    catch (e) {
+        failSubmit(e);
     }
-    ;
-
-    xhttp.send(json);
 }
 
-function disableForm(){
-	var elements = document.getElementById("loginForm").elements;
-	for (var i = 0; i < elements.length; i++) {
-		elements[i].disabled = true;
-}
-}
-
-function enableForm(){
-	var elements = document.getElementById("loginForm").elements;
-	for (var i = 0; i < elements.length; i++) {
-		elements[i].disabled = false;
-}
+function disableForm() {
+    var elements = document.getElementById("loginForm").elements;
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].disabled = true;
+    }
 }
 
-function successSubmit() {
+function enableForm() {
+    var elements = document.getElementById("loginForm").elements;
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].disabled = false;
+    }
+}
+
+function successSubmit(answer) {
+    document.getElementById("nickname").innerHTML = answer.name;
+    document.getElementById("avatar").src = answer.photoUrl;
     document.getElementById("errorBlock").style.display = "none";
-	document.getElementById("loginForm").style.display = "none";
-	document.getElementById("logoutForm").style.display = "block";
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById("logoutForm").style.display = "block";
 }
 
-function failSubmit(code, text) {
-	document.getElementById("errorMessage").innerHTML = "Error " + code + ": "+text;
+function failSubmit(text) {
+    document.getElementById("errorMessage").innerHTML = "Error: " + text;
     document.getElementById("errorBlock").style.display = "block";
-	enableForm();
+    enableForm();
 }
 
 function sendLogoutForm() {
-	document.getElementById("logoutForm").style.display = "none";
-	document.getElementById("loginForm").style.display = "block";
+    document.getElementById("logoutForm").style.display = "none";
+    document.getElementById("loginForm").style.display = "block";
 }
