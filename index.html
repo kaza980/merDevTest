@@ -8,36 +8,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="w-Mercury-Development">
+        <div class="logo-block">
             <img id="logo" src="img/w-mercury-development.svg">
         </div>
-        <div class="whiteBackground">
-            <form id="loginForm" name = "loginForm" onsubmit="sendLoginForm(); disableForm(); return false">
-                <div class="log-In">
+        <div class="main-block">
+            <form id="login-form" name = "loginForm" onsubmit="sendLoginForm(); disableForm(); return false">
+                <div class="main-block__title">
                     <p>Log In</p>
                 </div>
-                <div class="center inputField">
-                    <input id="email" class="inputForm " name="email" type="email" placeholder="E-mail" required title="Enter Email">
+                <div class="center main-block__input">
+                    <input id="email" class="main-block__input-field " name="email" type="email" placeholder="E-mail" required title="Enter Email">
                 </div>
-                <div class="center inputField">
-                    <input id="password" class="inputForm" name="password" type="password" placeholder="Password" required title="Enter Password">
+                <div class="center main-block__input">
+                    <input id="password" class="main-block__input-field" name="password" type="password" placeholder="Password" required title="Enter Password">
                 </div>
-                <div class="center" id="errorBlock">
-                    <p id="errorMessage">E-mail or password is incorrect</p>
+                <div class="center" id="error-block">
+                    <p id="error-message"></p>
                 </div>
-                <div class="center buttonField">
-                    <input type="submit" value="Login" class="buttonForm">
+                <div class="center main-block__button">
+                    <input type="submit" value="Login" class="main-block__button-field">
                 </div>
             </form>
-            <form id="logoutForm" onsubmit="sendLogoutForm();" style="display:none">
-                <div class="avatar center">
+            <form id="logout-form" onsubmit="sendLogoutForm();" style="display:none">
+                <div class="main-block__avatar center">
                     <img id="avatar">
                 </div>
-                <div class="nickname">
+                <div class="main-block__nickname">
                     <p id="nickname">Helena Joseph</p>
                 </div>
-                <div class="center buttonField">
-                    <input type="submit" value="Logout" class="buttonForm">
+                <div class="center main-block__button">
+                    <input type="submit" value="Logout" class="main-block__button-field">
                 </div>
             </form>
         </div>
