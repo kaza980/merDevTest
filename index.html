@@ -1,45 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
         <title>MerDev: Authorization</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="./components/app.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
-        <div class="logo-block">
-            <img id="logo" src="img/w-mercury-development.svg">
-        </div>
-        <div class="main-block">
-            <form id="login-form" name = "loginForm" onsubmit="sendLoginForm(); disableForm(); return false">
-                <div class="main-block__title">
-                    <p>Log In</p>
-                </div>
-                <div class="center main-block__input">
-                    <input id="email" class="main-block__input-field " name="email" type="email" placeholder="E-mail" required title="Enter Email">
-                </div>
-                <div class="center main-block__input">
-                    <input id="password" class="main-block__input-field" name="password" type="password" placeholder="Password" required title="Enter Password">
-                </div>
-                <div class="center" id="error-block">
-                    <p id="error-message"></p>
-                </div>
-                <div class="center main-block__button">
-                    <input type="submit" value="Login" class="main-block__button-field">
-                </div>
-            </form>
-            <form id="logout-form" onsubmit="sendLogoutForm();" style="display:none">
-                <div class="main-block__avatar center">
-                    <img id="avatar">
-                </div>
-                <div class="main-block__nickname">
-                    <p id="nickname">Helena Joseph</p>
-                </div>
-                <div class="center main-block__button">
-                    <input type="submit" value="Logout" class="main-block__button-field">
-                </div>
-            </form>
-        </div>
-    </body>
+  <body>
+    <div id="root"></div>
+   <script src="https://unpkg.com/react@16/umd/react.production.min.js"crossorigin></script>
+   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"crossorigin></script>
+    <script src="app.js"></script>
+  </body>
 </html>

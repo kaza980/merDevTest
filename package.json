@@ -1,0 +1,24 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "## Run * Fork repo  * Clone forked repo ``` git clone https://github.com/<username>/learn-react.git ``` * Open `index.html` in a browser",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akuznetsov-md/learn-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akuznetsov-md/learn-react/issues"
+  },
+  "homepage": "https://github.com/akuznetsov-md/learn-react#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-transform-react-jsx": "^7.1.6"
+  }
+}
