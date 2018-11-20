@@ -47,10 +47,8 @@ class App extends React.Component {
 
     logout() {
         this.setState({
-            user: null,
-            error: null
+            user: null
         });
-
     }
 
     handleChangeEmail(e) {

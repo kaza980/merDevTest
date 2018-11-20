@@ -11,10 +11,10 @@ class LogoutnForm extends Component {
         return (
             <form id="logout-form" onSubmit={this.sendLogoutForm} style={this.state.user ? null : {display: "none"}}>
                 <div className="main-block__avatar center">
-                    <img id="avatar" src = {this.state.user ? this.state.user.photoUrl : ""}/>
+                    <img id="avatar" src={this.state.user ? this.state.user.photoUrl : ""}/>
                 </div>
                 <div className="main-block__nickname">
-                    <p id="nickname">{this.state.user? this.state.user.name : ""}</p>
+                    <p id="nickname">{this.state.user ? this.state.user.name : ""}</p>
                 </div>
                 <Button value="Logout"/>
             </form>
@@ -22,7 +22,7 @@ class LogoutnForm extends Component {
     }
 
     sendLogoutForm() {
-        this.setState({user: null, error:null})
+        this.setState({user: null, error: null})
     }
 }
 
