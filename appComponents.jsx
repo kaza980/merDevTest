@@ -145,6 +145,16 @@ class LogoutForm extends React.Component {
   }
 }
 
+class Panel extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <div className="main-block">{this.props.children}</div>;
+  }
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -163,13 +173,13 @@ class App extends React.Component {
         <div className="logo-block">
           <img id="logo" src="img/w-mercury-development.svg" />
         </div>
-        <div className="main-block">
+        <Panel>
           {this.state.user ? (
             <LogoutForm user={this.state.user} updateUser={this.updateUser} />
           ) : (
             <LoginForm user={this.state.user} updateUser={this.updateUser} />
           )}
-        </div>
+        </Panel>
       </div>
     );
   }
