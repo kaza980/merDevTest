@@ -1,191 +1,191 @@
 body {
-    background: pink url('img/rectangle-2.svg') no-repeat;
-    background-size: 100% auto;
-    display: block;
+  background: pink url("img/rectangle-2.svg") no-repeat;
+  background-size: 100% auto;
+  display: block;
 }
 
 .logo-block {
-    width: 182px;
-    height: 40px;
-    margin: 43px auto 37px auto;
+  width: 182px;
+  height: 40px;
+  margin: 43px auto 37px auto;
 }
 
 #logo {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .main-block__title > p {
-    font-family: Arial;
-    font-size: 20px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #262626;
-    margin: 0px;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #262626;
+  margin: 0px;
 }
 
 .center {
-    margin: 0px auto;
+  margin: 0px auto;
 }
 
 .main-block__button-field {
-    width: 100%;
-    height: 100%;
-    border-radius: 100px;
-    box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
-    background-color: #ed4159;
-    font-family: Arial;
-    font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
+  background-color: #ed4159;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
 }
 
 .main-block__avatar {
-    width: 86px;
-    height: 86px;
-    border: solid 1px #979797;
-    border-radius: 50%;
+  width: 86px;
+  height: 86px;
+  border: solid 1px #979797;
+  border-radius: 50%;
 }
 
 .main-block__avatar > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .main-block__nickname {
-    margin-top: 24px;
-    margin-bottom: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .main-block__nickname > p {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.2px;
-    color: #262626;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #262626;
 }
 
 #error-block > p {
-    padding-left: 15px;
-    padding-top: 12px;
-    font-family: Arial;
-    font-size: 12px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ed4159;
+  padding-left: 15px;
+  padding-top: 12px;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ed4159;
 }
 
 .main-block {
-    padding: 32px 24px 48px 24px;
-    max-width: 500px;
-    margin: 0px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
+  padding: 32px 24px 48px 24px;
+  max-width: 500px;
+  margin: 0px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
 }
 
 .main-block__title {
-    margin: 0px auto 32px auto;
-    width: 112px;
-    height: 24px;
-    opacity: 0.8;
+  margin: 0px auto 32px auto;
+  width: 112px;
+  height: 24px;
+  opacity: 0.8;
 }
 
 .main-block__input-field {
-    height: 100%;
-    width: 100%;
-    padding-left: 15px;
-    border-radius: 4px;
-    border: solid 1px rgba(151, 151, 151, 0.25);
-    background-color: #f1f1f1;
-    font-family: Arial;
-    font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #262626;
-    box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+  border-radius: 4px;
+  border: solid 1px rgba(151, 151, 151, 0.25);
+  background-color: #f1f1f1;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #262626;
+  box-sizing: border-box;
 }
 
 .main-block__input {
-    width: auto;
-    height: 48px;
-    margin-bottom: 24px;
+  width: auto;
+  height: 48px;
+  margin-bottom: 24px;
 }
 
 .main-block__button {
-    margin-top: 16px;
-    width: 251px;
-    height: 48px;
+  margin-top: 16px;
+  width: 251px;
+  height: 48px;
 }
 
 #error-block {
-    height: 40px;
-    border-radius: 4px;
-    background-color: rgba(237, 65, 89, 0.25);
+  height: 40px;
+  border-radius: 4px;
+  background-color: rgba(237, 65, 89, 0.25);
 }
 
 @media (min-device-width: 320px) and (max-device-width: 480px) {
-    .main-block {
-        padding: 32px 0px 48px 0px;
-        width: 288px;
-    }
+  .main-block {
+    padding: 32px 0px 48px 0px;
+    width: 288px;
+  }
 
-    .main-block__title {
-        width: 65px;
-    }
+  .main-block__title {
+    width: 65px;
+  }
 
-    .main-block__input {
-        width: 240px;
-    }
+  .main-block__input {
+    width: 240px;
+  }
 
-    .main-block__button {
-        width: 145px;
-    }
+  .main-block__button {
+    width: 145px;
+  }
 
-    #error-block {
-        width: 240px;
-    }
+  #error-block {
+    width: 240px;
+  }
 }
 
 @media (orientation: landscape) and (min-device-height: 320px) and (max-device-height: 480px) {
-    .main-block {
-        padding: 32px 0px 48px 0px;
-        width: 500px;
-    }
+  .main-block {
+    padding: 32px 0px 48px 0px;
+    width: 500px;
+  }
 
-    .main-block__title {
-        width: 112px;
-    }
+  .main-block__title {
+    width: 112px;
+  }
 
-    .main-block__input {
-        width: 416px;
-    }
+  .main-block__input {
+    width: 416px;
+  }
 
-    .main-block__button {
-        width: 251px;
-    }
+  .main-block__button {
+    width: 251px;
+  }
 
-    #error-block {
-        width: 416px;
-    }
+  #error-block {
+    width: 416px;
+  }
 }
