@@ -86,7 +86,7 @@ class LoginForm extends React.Component {
     }
   }
 
-  render(props) {
+  render() {
     return (
       <form onSubmit={this.sendLoginForm}>
         <div className="main-block__title">
@@ -127,11 +127,10 @@ class LogoutForm extends React.Component {
     this.props.updateUser(null);
   }
 
-  render(props) {
+  render() {
     return (
       <form
         onSubmit={this.sendLogoutForm}
-        style={this.props.user ? null : { display: "none" }}
       >
         <div className="main-block__avatar center">
           <img src={this.props.user ? this.props.user.photoUrl : ""} />
