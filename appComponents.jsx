@@ -1,13 +1,11 @@
-import Panel from "./Panel";
-import LoginForm from "./components/LoginForm";
-import ProfileForm from "./components/ProfileForm";
+import Panel from "./components/Panel.js";
+import LoginForm from "./components/LoginForm.js";
+import ProfileForm from "./components/ProfileForm.js";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.updateUser = this.updateUser.bind(this);
-
-    this.state = { user: null };
   }
 
   updateUser(user) {
@@ -20,19 +18,17 @@ class App extends React.Component {
         <div className="logo-block">
           <img id="logo" src="img/w-mercury-development.svg" />
         </div>
-        <Panel>
-          {this.state.user ? (
-            <ProfileForm user={this.state.user} updateUser={this.updateUser} />
-          ) : (
-            <LoginForm user={this.state.user} updateUser={this.updateUser} />
-          )}
-        </Panel>
+          <Panel>
+            {this.state.user ? (
+              <ProfileForm
+              />
+            ) : (
+              <LoginForm/>
+            )}
+          </Panel>
       </div>
     );
   }
 }
 
-ReactDOM.render(
-  <App/>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));

@@ -1,7 +1,7 @@
-import {Input} from "./Input";
-import {Button} from "./Button";
+import {Input} from "./Input.js";
+import {Button} from "./Button.js";
 
-export class LoginForm extends React.Component {
+export default class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleChangeEmail = this.handleChangeEmail.bind(this);

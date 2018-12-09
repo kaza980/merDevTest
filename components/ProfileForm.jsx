@@ -1,6 +1,7 @@
-import {Button} from "./Button";
+import {Button} from "./Button.js";
+import {UserContext} from '../appComponents.js';
 
-export class ProfileForm extends React.Component {
+export default class ProfileForm extends React.Component {
     constructor(props) {
         super(props);
         this.sendProfileForm = this.sendProfileForm.bind(this);
@@ -13,16 +14,16 @@ export class ProfileForm extends React.Component {
     render() {
         return (
             <form
-                onSubmit={this.sendProfileForm}
+                onSubmit={updateUser(null)}
             >
                 <div className="main-block__avatar center">
-                    <img src={this.props.user.photoUrl} />
+                    <img src={user.photoUrl} />
                 </div>
                 <div className="main-block__nickname">
-                    <p>{this.props.user.name}</p>
+                    <p>{user.name}</p>
                 </div>
                 <Button value="Logout" />
             </form>
-        );
+            )
     }
 }
