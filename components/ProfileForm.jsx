@@ -1,35 +1,31 @@
-import {Button} from "./Button.js";
-import {UserContext} from '../appComponents.js';
+import { Button } from "./Button.js";
+import { UserContext } from "../appComponents.js";
 
 export default class ProfileForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.sendProfileForm = this.sendProfileForm.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.sendProfileForm = this.sendProfileForm.bind(this);
+  }
 
-    sendProfileForm() {
-        this.props.updateUser(null);
-    }
+  sendProfileForm() {
+    this.props.updateUser(null);
+  }
 
-    render() {
-        return (
-            <UserContext.Consumer>
-            {({user}) => (
-            <form
-                onSubmit={this.sendProfileForm}
-            >
-                <div className="main-block__avatar center">
-                    <img src={user.photoUrl} />
-                </div>
-                <div className="main-block__nickname">
-                    <p>{user.name}</p>
-                </div>
-                <Button value="Logout" />
-            </form>
-            )
-            }
-            </UserContext.Consumer>
-        );
-
-    }
+  render() {
+    return (
+      <UserContext.Consumer>
+        {({ user }) => (
+          <form onSubmit={this.sendProfileForm}>
+            <div className="profile-form__avatar center">
+              <img src={user.photoUrl} />
+            </div>
+            <div className="profile-form__nickname">
+              <p>{user.name}</p>
+            </div>
+            <Button value="Logout" />
+          </form>
+        )}
+      </UserContext.Consumer>
+    );
+  }
 }

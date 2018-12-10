@@ -4,19 +4,19 @@ body {
   display: block;
 }
 
-.logo-block {
+.app-logo {
   width: 182px;
   height: 40px;
   margin: 43px auto 37px auto;
 }
 
-#logo {
+.app-logo__logo {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.main-block__title > p {
+.login-form > p {
   font-family: Arial;
   font-size: 20px;
   font-weight: bold;
@@ -33,7 +33,7 @@ body {
   margin: 0px auto;
 }
 
-.main-block__button-field {
+.button__button-field {
   width: 100%;
   height: 100%;
   border-radius: 100px;
@@ -50,25 +50,25 @@ body {
   color: #ffffff;
 }
 
-.main-block__avatar {
+.profile-form__avatar {
   width: 86px;
   height: 86px;
   border: solid 1px #979797;
   border-radius: 50%;
 }
 
-.main-block__avatar > img {
+.profile-form__avatar > img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 
-.main-block__nickname {
+.profile-form__nickname {
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
-.main-block__nickname > p {
+.profile-form__nickname > p {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -79,7 +79,7 @@ body {
   color: #262626;
 }
 
-#error-block > p {
+.login-form__error-block > p {
   padding-left: 15px;
   padding-top: 12px;
   font-family: Arial;
@@ -92,7 +92,7 @@ body {
   color: #ed4159;
 }
 
-.main-block {
+.panel {
   padding: 32px 24px 48px 24px;
   max-width: 500px;
   margin: 0px auto;
@@ -101,14 +101,14 @@ body {
   background-color: #ffffff;
 }
 
-.main-block__title {
+.login-form {
   margin: 0px auto 32px auto;
   width: 112px;
   height: 24px;
   opacity: 0.8;
 }
 
-.main-block__input-field {
+.input__input-field {
   height: 100%;
   width: 100%;
   padding-left: 15px;
@@ -126,66 +126,66 @@ body {
   box-sizing: border-box;
 }
 
-.main-block__input {
+.input {
   width: auto;
   height: 48px;
   margin-bottom: 24px;
 }
 
-.main-block__button {
+.button {
   margin-top: 16px;
   width: 251px;
   height: 48px;
 }
 
-#error-block {
+.login-form__error-block {
   height: 40px;
   border-radius: 4px;
   background-color: rgba(237, 65, 89, 0.25);
 }
 
 @media (min-device-width: 320px) and (max-device-width: 480px) {
-  .main-block {
+  .panel {
     padding: 32px 0px 48px 0px;
     width: 288px;
   }
 
-  .main-block__title {
+  .login-form {
     width: 65px;
   }
 
-  .main-block__input {
+  .input {
     width: 240px;
   }
 
-  .main-block__button {
+  .button {
     width: 145px;
   }
 
-  #error-block {
+  .login-form__error-block {
     width: 240px;
   }
 }
 
 @media (orientation: landscape) and (min-device-height: 320px) and (max-device-height: 480px) {
-  .main-block {
+  .panel {
     padding: 32px 0px 48px 0px;
     width: 500px;
   }
 
-  .main-block__title {
+  .login-form {
     width: 112px;
   }
 
-  .main-block__input {
+  .input {
     width: 416px;
   }
 
-  .main-block__button {
+  .button {
     width: 251px;
   }
 
-  #error-block {
+  .login-form__error-block {
     width: 416px;
   }
 }
