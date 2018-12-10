@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.updateUser = this.updateUser.bind(this);
-    this.state = { user: null, updateUser: this.updateUser };
+    this.state = { user: null };
   }
 
   updateUser(user) {
