@@ -2,10 +2,17 @@ import Panel from "./components/Panel.js";
 import LoginForm from "./components/LoginForm.js";
 import ProfileForm from "./components/ProfileForm.js";
 
+export const UserContext = React.createContext({
+    user: null,
+    updateUser: () => {}
+});
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.updateUser = this.updateUser.bind(this);
+    this.state = { user: null,
+    updateUser: this.updateUser};
   }
 
   updateUser(user) {
@@ -18,14 +25,16 @@ class App extends React.Component {
         <div className="logo-block">
           <img id="logo" src="img/w-mercury-development.svg" />
         </div>
+        <UserContext.Provider value={this.state}>
           <Panel>
             {this.state.user ? (
-              <ProfileForm
+              <ProfileForm updateUser={this.updateUser}
               />
             ) : (
-              <LoginForm/>
+              <LoginForm updateUser={this.updateUser}/>
             )}
           </Panel>
+        </UserContext.Provider>
       </div>
     );
   }

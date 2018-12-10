@@ -13,8 +13,10 @@ export default class ProfileForm extends React.Component {
 
     render() {
         return (
+            <UserContext.Consumer>
+            {({user}) => (
             <form
-                onSubmit={updateUser(null)}
+                onSubmit={this.sendProfileForm}
             >
                 <div className="main-block__avatar center">
                     <img src={user.photoUrl} />
@@ -25,5 +27,9 @@ export default class ProfileForm extends React.Component {
                 <Button value="Logout" />
             </form>
             )
+            }
+            </UserContext.Consumer>
+        );
+
     }
 }

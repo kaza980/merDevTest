@@ -4,7 +4,7 @@ export function Input(props) {
             <input
                 className="main-block__input-field "
                 required
-                {...this.props}
+                {...props}
             />
         </div>
     );

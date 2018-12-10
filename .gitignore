@@ -2,3 +2,5 @@
 node_modules
 # Ignore webstorm forder
 .idea
+# Ignore js files
+**/*.js
