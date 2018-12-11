@@ -1,5 +1,5 @@
 import { Button } from "./Button.js";
-import { UserContext } from "../appComponents.js";
+import { UserContext } from "./appComponents.js";
 
 export default class ProfileForm extends React.Component {
   constructor(props) {
