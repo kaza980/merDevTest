@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel src/*.jsx --out-dir dist/ --plugins @babel/plugin-transform-react-jsx --watch"
+    "start": "webpack-dev-server  --config ./webpack.config.js --mode development",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,19 @@
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
     "@babel/plugin-transform-react-jsx": "^7.1.6",
-    "prettier": "^1.15.2"
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "css-loader": "^2.0.0",
+    "file-loader": "^2.0.0",
+    "prettier": "^1.15.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
   }
 }

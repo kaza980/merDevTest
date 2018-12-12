@@ -1,6 +1,6 @@
-import Panel from "./Panel.js";
-import LoginForm from "./LoginForm.js";
-import ProfileForm from "./ProfileForm.js";
+import Panel from "./Panel.jsx";
+import LoginForm from "./LoginForm.jsx";
+import ProfileForm from "./ProfileForm.jsx";
 
 export const UserContext = React.createContext({
   user: null,

@@ -1,5 +1,5 @@
-import { Input } from "./Input.js";
-import { Button } from "./Button.js";
+import { Input } from "./Input.jsx";
+import { Button } from "./Button.jsx";
 
 export default class LoginForm extends React.Component {
   constructor(props) {
