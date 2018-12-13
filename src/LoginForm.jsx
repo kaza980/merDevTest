@@ -1,5 +1,7 @@
 import { Input } from "./Input.jsx";
 import { Button } from "./Button.jsx";
+import styles from "../style.css";
+import classNames from 'classnames';
 
 export default class LoginForm extends React.Component {
   constructor(props) {
@@ -63,7 +65,7 @@ export default class LoginForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.sendLoginForm}>
-        <div className="login-form">
+        <div className={styles["login-form"]}>
           <p>Log In</p>
         </div>
         <Input
@@ -83,7 +85,7 @@ export default class LoginForm extends React.Component {
           onChange={this.handleChangePassword}
         />
         <div
-          className="center login-form__error-block"
+          className={classNames(styles.center, styles["login-form__error-block"])}
           hidden={!this.state.error}
         >
           <p>{this.state.error}</p>

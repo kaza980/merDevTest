@@ -1,5 +1,7 @@
+import styles from "../style.css";
+
 export default class Panel extends React.Component {
   render() {
-    return <div className="panel" {...this.props} />;
+    return <div className={styles.panel} {...this.props} />;
   }
 }

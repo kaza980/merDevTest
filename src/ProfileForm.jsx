@@ -1,5 +1,7 @@
 import { Button } from "./Button.jsx";
 import { UserContext } from "./appComponents.jsx";
+import styles from "../style.css";
+import classNames from 'classnames';
 
 export default class ProfileForm extends React.Component {
   constructor(props) {
@@ -16,10 +18,10 @@ export default class ProfileForm extends React.Component {
       <UserContext.Consumer>
         {({ user }) => (
           <form onSubmit={this.sendProfileForm}>
-            <div className="profile-form__avatar center">
+            <div className={classNames(styles["profile-form__avatar"], styles.center)}>
               <img src={user.photoUrl} />
             </div>
-            <div className="profile-form__nickname">
+            <div className={styles["profile-form__nickname"]}>
               <p>{user.name}</p>
             </div>
             <Button value="Logout" />

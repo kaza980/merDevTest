@@ -1,6 +1,7 @@
 import Panel from "./Panel.jsx";
 import LoginForm from "./LoginForm.jsx";
 import ProfileForm from "./ProfileForm.jsx";
+import styles from "../style.css";
 
 export const UserContext = React.createContext({
   user: null,
@@ -21,8 +22,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="app-logo">
-          <img class="app-logo__logo" src="../img/w-mercury-development.svg" />
+        <div className={styles["app-logo"]}>
+          <img class={styles["app-logo__logo"]} src="../img/w-mercury-development.svg" />
         </div>
         <UserContext.Provider value={this.state}>
           <Panel>
