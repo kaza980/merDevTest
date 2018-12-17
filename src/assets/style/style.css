@@ -1,0 +1,9 @@
+body {
+  background: pink url("../img/rectangle-2.svg") no-repeat;
+  background-size: 100% auto;
+  display: block;
+}
+
+.center {
+  margin: 0px auto;
+}
