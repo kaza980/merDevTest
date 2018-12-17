@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
       <div>
         <div className={styles["app-logo"]}>
-          <img className={styles["app-logo__logo"]} src="../../assets/img/w-mercury-development.svg" />
+          <img className={styles["app-logo__logo"]} src="./src/assets/img/w-mercury-development.svg" />
         </div>
         <UserContext.Provider value={this.state}>
           <Panel>
